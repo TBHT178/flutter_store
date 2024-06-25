@@ -1,5 +1,5 @@
-class CustomSizes{
 
+class CustomSizes {
   // Padding and margin sizes
   static const double xs = 4.0;
   static const double sm = 8.0;
@@ -18,7 +18,7 @@ class CustomSizes{
   static const double fontSizeMd = 16.0;
   static const double fontSizeLg = 18.0;
 
-  // Button Sizes
+  // Button sizes
   static const double buttonHeight = 18.0;
   static const double buttonRadius = 12.0;
   static const double buttonWidth = 120.0;
@@ -68,3 +68,6 @@ class CustomSizes{
   // Grid view spacing
   static const double gridViewSpacing = 16.0;
 }
+
+
+
