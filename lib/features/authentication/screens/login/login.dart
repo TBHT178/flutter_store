@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               // Logo, Title and Subtitle
-              CustomLoginHeader(),
+              const CustomLoginHeader(),
 
               /// Form
               const CustomLoginForm(),
