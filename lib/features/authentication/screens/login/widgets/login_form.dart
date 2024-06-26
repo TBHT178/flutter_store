@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_store/features/authentication/screens/password_configuration/forget_password.dart';
+import 'package:flutter_store/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:flutter_store/features/authentication/screens/signup/signup.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -55,7 +56,7 @@ class CustomLoginForm extends StatelessWidget {
 
                   /// Forget Password
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () => Get.to(() => const ForgetPassword()),
                       child: const Text(TTexts.forgetPassword))
                 ],
               ),
