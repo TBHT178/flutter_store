@@ -15,7 +15,7 @@ class TermAndConditionCheckbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = CustomHelperFunctions.isDarkMode(context);
+    final dark = THelperFunctions.isDarkMode(context);
     return Row(
       children: [
         SizedBox(
@@ -23,16 +23,16 @@ class TermAndConditionCheckbox extends StatelessWidget {
             width: 24,
             child:
             Checkbox(value: true, onChanged: (value) {})),
-        const SizedBox(width: CustomSizes.spaceBtwItems,),
+        const SizedBox(width: TSizes.spaceBtwItems,),
         Text.rich(
             TextSpan(children: [
-              TextSpan(text: '${CustomTexts.iAgreeTo} ', style: Theme.of(context).textTheme.bodySmall),
-              TextSpan(text: '${CustomTexts.privacyPolicy} ', style: Theme.of(context).textTheme.bodyMedium!.apply(
-                  color: dark ? CustomColors.white : CustomColors.primary
+              TextSpan(text: '${TTexts.iAgreeTo} ', style: Theme.of(context).textTheme.bodySmall),
+              TextSpan(text: '${TTexts.privacyPolicy} ', style: Theme.of(context).textTheme.bodyMedium!.apply(
+                  color: dark ? TColors.white : TColors.primary
               )),
-              TextSpan(text: '${CustomTexts.and} ', style: Theme.of(context).textTheme.bodySmall),
-              TextSpan(text: CustomTexts.termsOfUse, style: Theme.of(context).textTheme.bodyMedium!.apply(
-                  color: dark ? CustomColors.white : CustomColors.primary
+              TextSpan(text: '${TTexts.and} ', style: Theme.of(context).textTheme.bodySmall),
+              TextSpan(text: TTexts.termsOfUse, style: Theme.of(context).textTheme.bodyMedium!.apply(
+                  color: dark ? TColors.white : TColors.primary
               )),
             ])
         ),

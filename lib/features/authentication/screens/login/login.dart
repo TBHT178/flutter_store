@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = CustomHelperFunctions.isDarkMode(context);
+    final dark = THelperFunctions.isDarkMode(context);
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -34,10 +34,10 @@ class LoginScreen extends StatelessWidget {
               const CustomLoginForm(),
 
               /// Divider
-              CustomFormDivider(dividerText: CustomTexts.orSignInWith.capitalize!),
+              CustomFormDivider(dividerText: TTexts.orSignInWith.capitalize!),
 
               const SizedBox(
-                height: CustomSizes.spaceBtwSections,
+                height: TSizes.spaceBtwSections,
               ),
 
               /// Footer

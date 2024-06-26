@@ -29,76 +29,76 @@ class CustomSignupForm extends StatelessWidget {
                 child: TextFormField(
                   expands: false,
                   decoration: const InputDecoration(
-                      labelText: CustomTexts.firstName,
+                      labelText: TTexts.firstName,
                       prefixIcon: Icon(Iconsax.user)),
                 ),
               ),
               const SizedBox(
-                width: CustomSizes.spaceBtwInputFields,
+                width: TSizes.spaceBtwInputFields,
               ),
               Expanded(
                 child: TextFormField(
                   expands: false,
                   decoration: const InputDecoration(
-                      labelText: CustomTexts.lastName,
+                      labelText: TTexts.lastName,
                       prefixIcon: Icon(Iconsax.user)),
                 ),
               ),
             ],
           ),
           const SizedBox(
-            height: CustomSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
 
           /// Username
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-                labelText: CustomTexts.username,
+                labelText: TTexts.username,
                 prefixIcon: Icon(Iconsax.user_edit)),
           ),
           const SizedBox(
-            height: CustomSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
 
           /// Email
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-                labelText: CustomTexts.email,
+                labelText: TTexts.email,
                 prefixIcon: Icon(Iconsax.direct)),
           ),
           const SizedBox(
-            height: CustomSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
 
           /// Phone
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-                labelText: CustomTexts.phoneNo,
+                labelText: TTexts.phoneNo,
                 prefixIcon: Icon(Iconsax.call)),
           ),
           const SizedBox(
-            height: CustomSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
 
           /// Password
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-                labelText: CustomTexts.password,
+                labelText: TTexts.password,
                 prefixIcon: Icon(Iconsax.password_check),
                 suffixIcon: Icon(Iconsax.eye_slash)),
           ),
           const SizedBox(
-            height: CustomSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
 
           /// Term & Conditions Checkbox
           const TermAndConditionCheckbox(),
           const SizedBox(
-            height: CustomSizes.spaceBtwSections,
+            height: TSizes.spaceBtwSections,
           ),
 
           /// Sign Up Button
@@ -106,7 +106,7 @@ class CustomSignupForm extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: ()=> Get.to(()=> const VerifyEmailScreen()),
-              child: const Text(CustomTexts.createAccount),
+              child: const Text(TTexts.createAccount),
             ),
           )
         ],

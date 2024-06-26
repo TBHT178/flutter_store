@@ -15,7 +15,7 @@ class CustomLoginHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final dark = CustomHelperFunctions.isDarkMode(context);
+    final dark = THelperFunctions.isDarkMode(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,17 +23,17 @@ class CustomLoginHeader extends StatelessWidget {
         Image(
             height: 150,
             image: AssetImage(dark
-                ? CustomImages.lightAppLogo
-                : CustomImages.darkAppLogo)),
+                ? TImages.lightAppLogo
+                : TImages.darkAppLogo)),
         Text(
-          CustomTexts.loginTitle,
+          TTexts.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         const SizedBox(
-          height: CustomSizes.sm,
+          height: TSizes.sm,
         ),
         Text(
-          CustomTexts.loginSubTitle,
+          TTexts.loginSubTitle,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],

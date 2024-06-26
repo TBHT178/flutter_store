@@ -17,30 +17,30 @@ class CustomSocialButtons extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-              border: Border.all(color: CustomColors.grey),
+              border: Border.all(color: TColors.grey),
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
             onPressed: () {},
             icon: const Image(
-              width: CustomSizes.iconMd,
-              height: CustomSizes.iconMd,
-              image: AssetImage(CustomImages.google),
+              width: TSizes.iconMd,
+              height: TSizes.iconMd,
+              image: AssetImage(TImages.google),
             ),
           ),
         ),
         const SizedBox(
-          width: CustomSizes.spaceBtwItems,
+          width: TSizes.spaceBtwItems,
         ),
         Container(
           decoration: BoxDecoration(
-              border: Border.all(color: CustomColors.grey),
+              border: Border.all(color: TColors.grey),
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
             onPressed: () {},
             icon: const Image(
-              width: CustomSizes.iconMd,
-              height: CustomSizes.iconMd,
-              image: AssetImage(CustomImages.facebook),
+              width: TSizes.iconMd,
+              height: TSizes.iconMd,
+              image: AssetImage(TImages.facebook),
             ),
           ),
         ),
