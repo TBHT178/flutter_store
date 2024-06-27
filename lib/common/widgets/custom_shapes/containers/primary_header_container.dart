@@ -6,7 +6,8 @@ import 'circular_container.dart';
 
 class TPrimaryHeaderContainer extends StatelessWidget {
   const TPrimaryHeaderContainer({
-    super.key, required this.child,
+    super.key,
+    required this.child,
   });
 
   final Widget child;
@@ -14,13 +15,14 @@ class TPrimaryHeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TCurvedEdgeWidget(
-      child: Container(
-        color: TColors.primary,
-        padding: const EdgeInsets.all(0),
-          /// -- If [size.isFinite' : is not true.in Stack] error occur -> wrap it with a SizedBox
+      child: SizedBox(
+        height: 400,
+        child: Container(
+          color: TColors.primary,
+
+          /// -- If [size.isFinite' : is not true.in Stack] error occur -> wrap Container with a SizedBox
           child: Stack(
             children: [
-
               /// -- Background Custom Shapes
               Positioned(
                   top: -150,
@@ -34,9 +36,10 @@ class TPrimaryHeaderContainer extends StatelessWidget {
                   child: TCircularContainer(
                     backgroundColor: TColors.textWhite.withOpacity(0.1),
                   )),
+              child,
             ],
           ),
-
+        ),
       ),
     );
   }
