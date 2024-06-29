@@ -28,7 +28,7 @@ class TProductMetaData extends StatelessWidget {
               radius: TSizes.sm,
               backgroundColor: TColors.secondary.withOpacity(0.8),
               padding: const EdgeInsets.symmetric(horizontal: TSizes.sm, vertical:  TSizes.xs),
-              child: Text('255', style: Theme.of(context).textTheme.labelLarge!.apply(color: TColors.black),),
+              child: Text('25%', style: Theme.of(context).textTheme.labelLarge!.apply(color: TColors.black),),
             ),
             const SizedBox(width: TSizes.spaceBtwItems,),
 
@@ -60,6 +60,7 @@ class TProductMetaData extends StatelessWidget {
             TCircularImage(image: TImages.nikeLogo,
             width: 32,
             height: 32,
+            backgroundColor: dark ? Colors.black : TColors.white,
             overlayColor: dark ? TColors.white : TColors.black,),
             const TBrandTitleWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.medium,),
           ],
