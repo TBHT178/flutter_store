@@ -7,8 +7,10 @@ import '../images/t_circular_image.dart';
 
 class TUserProfile extends StatelessWidget {
   const TUserProfile({
-    super.key,
+    super.key, required this.onPressed,
   });
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class TUserProfile extends StatelessWidget {
       ),
       title: Text('Tram Tran', style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white),),
       subtitle: Text('support@tramtbh.com', style: Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white),),
-      trailing: IconButton(onPressed: (){}, icon: const Icon(Iconsax.edit, color: TColors.white,),),
+      trailing: IconButton(onPressed: onPressed, icon: const Icon(Iconsax.edit, color: TColors.white,),),
     );
   }
 }
