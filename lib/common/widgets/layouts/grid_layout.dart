@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../../utils/constants/sizes.dart';
-import '../products/products_cards/product_card_vertical.dart';
 
 class TGridLayout extends StatelessWidget {
   const TGridLayout({

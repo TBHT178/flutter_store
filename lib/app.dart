@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_store/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:flutter_store/utils/theme/theme.dart';
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       darkTheme: CustomTheme.darkTheme,
       theme: CustomTheme.lightTheme,
-      home: OnboardingScreen(),
+      home: const OnboardingScreen(),
 
     );
   }

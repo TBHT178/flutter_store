@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_store/features/authentication/screens/signup/verify_email.dart';
 import 'package:flutter_store/features/authentication/screens/signup/widgets/term_condition_checkbox.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
-import '../../../../../utils/helpers/helper_functions.dart';
 
 class CustomSignupForm extends StatelessWidget {
   const CustomSignupForm({

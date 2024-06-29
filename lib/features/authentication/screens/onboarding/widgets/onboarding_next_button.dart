@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_store/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:iconsax/iconsax.dart';

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_store/features/authentication/screens/password_configuration/forget_password.dart';
-import 'package:flutter_store/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:flutter_store/features/authentication/screens/signup/signup.dart';
 import 'package:flutter_store/navigation_menu.dart';
 import 'package:get/get.dart';
