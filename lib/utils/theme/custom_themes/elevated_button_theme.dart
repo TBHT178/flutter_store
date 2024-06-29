@@ -1,36 +1,39 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/colors.dart';
+import '../../constants/sizes.dart';
+
 class CustomElevatedButtonTheme{
   CustomElevatedButtonTheme._();  // avoid creating instances
 
   // Light theme
-  static final lightElevatedButtonTheme = ElevatedButtonThemeData(
+  static final lightElevatedButtonTheme  = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
-      foregroundColor: Colors.white,
-      backgroundColor: Colors.blue,
-      disabledForegroundColor: Colors.grey,
-      disabledBackgroundColor: Colors.grey,
-      side: const BorderSide(color: Colors.blue),
-      padding: const EdgeInsets.symmetric(vertical: 18),
-      textStyle: const TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
-    )
+      foregroundColor: TColors.light,
+      backgroundColor: TColors.primary,
+      disabledForegroundColor: TColors.darkGrey,
+      disabledBackgroundColor: TColors.buttonDisable,
+      side: const BorderSide(color: TColors.primary),
+      padding: const EdgeInsets.symmetric(vertical: TSizes.buttonHeight),
+      textStyle: const TextStyle(fontSize: 16, color: TColors.textWhite, fontWeight: FontWeight.w600),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(TSizes.buttonRadius)),
+    ),
   );
 
   // Dark theme
   static final darkElevatedButtonTheme = ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-          elevation: 0,
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.blue,
-          disabledForegroundColor: Colors.grey,
-          disabledBackgroundColor: Colors.grey,
-          side: const BorderSide(color: Colors.blue),
-          padding: const EdgeInsets.symmetric(vertical: 18),
-          textStyle: const TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
-      )
+    style: ElevatedButton.styleFrom(
+      elevation: 0,
+      foregroundColor: TColors.light,
+      backgroundColor: TColors.primary,
+      disabledForegroundColor: TColors.darkGrey,
+      disabledBackgroundColor: TColors.darkerGrey,
+      side: const BorderSide(color: TColors.primary),
+      padding: const EdgeInsets.symmetric(vertical: TSizes.buttonHeight),
+      textStyle: const TextStyle(fontSize: 16, color: TColors.textWhite, fontWeight: FontWeight.w600),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(TSizes.buttonRadius)),
+    ),
   );
 
 }

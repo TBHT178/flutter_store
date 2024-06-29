@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_store/utils/constants/colors.dart';
 
 class CustomCheckBoxTheme{
   CustomCheckBoxTheme._();
-  
+
   static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
     checkColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
@@ -14,7 +15,7 @@ class CustomCheckBoxTheme{
     }),
     fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
       if (states.contains(WidgetState.selected)) {
-        return Colors.blue;
+        return TColors.primary;
       } else {
         return Colors.transparent;
       }
@@ -32,7 +33,7 @@ class CustomCheckBoxTheme{
     }),
     fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
       if (states.contains(WidgetState.selected)) {
-        return Colors.blue;
+        return TColors.primary;
       } else {
         return Colors.transparent;
       }
