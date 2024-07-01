@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_store/features/personalization/screens/cart/cart.dart';
+import 'package:flutter_store/features/shop/screens/cart/cart.dart';
 import 'package:flutter_store/utils/helpers/helper_functions.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
