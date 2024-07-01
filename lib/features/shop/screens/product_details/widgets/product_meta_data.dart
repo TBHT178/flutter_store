@@ -60,7 +60,6 @@ class TProductMetaData extends StatelessWidget {
             TCircularImage(image: TImages.nikeLogo,
             width: 32,
             height: 32,
-            backgroundColor: dark ? Colors.black : TColors.white,
             overlayColor: dark ? TColors.white : TColors.black,),
             const TBrandTitleWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.medium,),
           ],
