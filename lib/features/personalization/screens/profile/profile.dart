@@ -13,7 +13,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const TAppBar(),
+      appBar: const TAppBar(showBackArrow: true,),
 
       /// Body
       body: SingleChildScrollView(
