@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "498150581082",
+    "project_id": "flutterstore-d12b6",
+    "storage_bucket": "flutterstore-d12b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498150581082:android:e4ae1eebe3016bb0ee4963",
+        "android_client_info": {
+          "package_name": "com.tramtbh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498150581082-46pabm24p8dqqnf1miqq7sad0hs6kak8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tramtbh",
+            "certificate_hash": "e95d2ad36462900587d50259e1ba5ae33487084f"
+          }
+        },
+        {
+          "client_id": "498150581082-31jm8jj62rlotfutl8qc98u655barfe2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUpA-5M85vxDLnxIBWyM1_Wb0erqei9ZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498150581082-31jm8jj62rlotfutl8qc98u655barfe2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "498150581082-seg9ng4lccvp0aa6nmkfrvp17nik9t9t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tramtbh.flutterStore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
