@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'app.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+Future<void> main() async {
   // todo: Add Widgets Binding
   // todo: Init Local Storage
   // todo: Await Native Splash
   // todo: Init Firebase
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
+      .then(
+    (FirebaseApp value) => Get.put(AuthenticationRepository()),
+  );
   // todo: Init Authentication
-
 
   runApp(const MyApp());
 }
-
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
