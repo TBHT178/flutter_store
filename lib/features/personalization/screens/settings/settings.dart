@@ -3,6 +3,7 @@ import 'package:flutter_store/common/widgets/appbar/appbar.dart';
 import 'package:flutter_store/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:flutter_store/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:flutter_store/common/widgets/texts/section_heading.dart';
+import 'package:flutter_store/data/repositories/authentication/authentication_repository.dart';
 import 'package:flutter_store/features/personalization/screens/address/address.dart';
 import 'package:flutter_store/features/personalization/screens/profile/profile.dart';
 import 'package:flutter_store/features/shop/screens/order/order.dart';
@@ -37,7 +38,9 @@ class SettingsScreen extends StatelessWidget {
                   ),
 
                   /// User Profile Card
-                  TUserProfile(onPressed:() => Get.to(() => const ProfileScreen()),),
+                  TUserProfile(
+                    onPressed: () => Get.to(() => const ProfileScreen()),
+                  ),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
@@ -123,28 +126,38 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.location,
                     title: 'Geolocation',
                     subTitle: 'Set recommendation based on location',
-                    trailing: Switch(value: true, onChanged: (value){},),
+                    trailing: Switch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.security_user,
                     title: 'Safe Mode',
                     subTitle: 'Search result is safe for all ages',
-                    trailing: Switch(value: false, onChanged: (value){},),
+                    trailing: Switch(
+                      value: false,
+                      onChanged: (value) {},
+                    ),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.image,
                     title: 'HD Image Quality',
                     subTitle: 'Set image quality to be seen',
-                    trailing: Switch(value: false, onChanged: (value){},),
+                    trailing: Switch(
+                      value: false,
+                      onChanged: (value) {},
+                    ),
                   ),
 
                   /// --Logout Button
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-                   SizedBox(
+                  SizedBox(
                     width: double.infinity,
-                   child: OutlinedButton(onPressed: (){}, child: const Text('Logout')),
+                    child: OutlinedButton(
+                        onPressed: () => AuthenticationRepository.instance.logout(), child: const Text('Logout')),
                   ),
                   const SizedBox(
                     height: TSizes.spaceBtwSections * 2.5,

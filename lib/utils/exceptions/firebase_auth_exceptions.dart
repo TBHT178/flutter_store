@@ -6,6 +6,8 @@ class TFirebaseAuthException implements Exception{
   /// Get the corresponding error message based on the error code
   String get message {
     switch (code){
+      case 'invalid-credential' :
+        return 'The supplied auth credential is incorrect, malformed or has expired.';
       case 'email-already-in-use' :
         return 'The email address is already registered. Please use a different email.';
       case 'invalid-email':
@@ -35,7 +37,7 @@ class TFirebaseAuthException implements Exception{
       case 'user-mismatch':
         return 'The supplied credentials do not correspond to the previously sign in user.';
       default:
-        return 'An unknown error occurred. Please try again.';
+        return 'An unknown Firebase Auth error occurred. Please try again.';
     }
   }
 }

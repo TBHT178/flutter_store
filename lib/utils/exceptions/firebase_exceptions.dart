@@ -52,7 +52,7 @@ class TFirebaseException implements Exception{
       case 'user-mismatch':
         return 'The supplied credentials do not correspond to the previously sign in user.';
       default:
-        return 'An unknown error occurred. Please try again.';
+        return 'An unknown Firebase error occurred. Please try again.';
     }
   }
 }
