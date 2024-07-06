@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_store/features/authentication/controllers/login/login_controller.dart';
 import 'package:flutter_store/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:flutter_store/features/authentication/screens/signup/signup.dart';
-import 'package:flutter_store/navigation_menu.dart';
 import 'package:flutter_store/utils/validators/validation.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
