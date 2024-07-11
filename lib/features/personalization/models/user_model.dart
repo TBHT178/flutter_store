@@ -77,7 +77,7 @@ class UserModel {
           phoneNumber: data['PhoneNumber'] ?? '',
           profilePicture: data['ProfilePicture'] ?? '');
     } else {
-      throw Exception("Document data is null");
+      return UserModel.empty();
     }
   }
 }

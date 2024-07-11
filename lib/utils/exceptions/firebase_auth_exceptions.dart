@@ -7,7 +7,7 @@ class TFirebaseAuthException implements Exception{
   String get message {
     switch (code){
       case 'invalid-credential' :
-        return 'The supplied auth credential is incorrect, malformed or has expired.';
+        return 'Invalid credential. Please double check your email and password and try again.';
       case 'email-already-in-use' :
         return 'The email address is already registered. Please use a different email.';
       case 'invalid-email':
