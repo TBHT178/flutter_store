@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_store/common/effect/shimmer.dart';
+import 'package:flutter_store/common/widgets/shimmers/shimmer.dart';
 import 'package:flutter_store/common/widgets/appbar/appbar.dart';
 import 'package:flutter_store/common/widgets/images/t_circular_image.dart';
 import 'package:flutter_store/common/widgets/texts/section_heading.dart';

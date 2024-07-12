@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_store/features/personalization/controller/user_controller.dart';
 import 'package:get/get.dart';
 
-import '../../../../../common/effect/shimmer.dart';
+import '../../../../../common/widgets/shimmers/shimmer.dart';
 import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../../utils/constants/colors.dart';
