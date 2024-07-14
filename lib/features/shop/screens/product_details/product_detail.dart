@@ -11,10 +11,13 @@ import 'package:readmore/readmore.dart';
 
 import '../../../shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import '../../../shop/screens/product_details/widgets/rating_share_widget.dart';
+import '../../models/product_model.dart';
 
 class ProductDetailScreen extends StatelessWidget {
-  const ProductDetailScreen({super.key});
+  const ProductDetailScreen({super.key, required this.product});
 
+  final ProductModel product;
+  
   @override
   Widget build(BuildContext context) {
     // final dark = THelperFunctions.isDarkMode(context);

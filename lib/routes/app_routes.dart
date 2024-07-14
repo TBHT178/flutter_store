@@ -17,6 +17,8 @@ import 'package:flutter_store/features/shop/screens/wishlist/wishlist.dart';
 import 'package:flutter_store/routes/routes.dart';
 import 'package:get/get.dart';
 
+import '../features/shop/models/product_model.dart';
+
 class AppRoutes{
   static final pages = [
     GetPage(name: TRoutes.home, page: () => const HomeScreen()),
@@ -24,7 +26,7 @@ class AppRoutes{
     GetPage(name: TRoutes.favourites, page: () => const FavouriteScreen()),
     GetPage(name: TRoutes.settings, page: () => const SettingsScreen()),
     GetPage(name: TRoutes.productReviews, page: () => const ProductReviewsScreen()),
-    GetPage(name: TRoutes.productDetail, page: () => const ProductDetailScreen()),
+    GetPage(name: TRoutes.productDetail, page: () =>  ProductDetailScreen(product: ProductModel.empty())),
     GetPage(name: TRoutes.order, page: () => const OrderScreen()),
     GetPage(name: TRoutes.checkout, page: () => const CheckoutScreen()),
     GetPage(name: TRoutes.cart, page: () => const CartScreen()),

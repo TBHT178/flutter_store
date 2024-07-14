@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_store/common/widgets/products/products_cards/product_card_vertical.dart';
+import 'package:flutter_store/common/widgets/shimmers/vertical_product_shimmer.dart';
+import 'package:flutter_store/features/shop/controllers/product_controller.dart';
 import 'package:flutter_store/features/shop/screens/all_products/all_products.dart';
 import 'package:flutter_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:flutter_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:flutter_store/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:flutter_store/utils/constants/image_strings.dart';
 import 'package:flutter_store/utils/constants/sizes.dart';
+import 'package:flutter_store/utils/dummydata/dummy_data.dart';
 import 'package:get/get.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -18,7 +21,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    final controller = Get.put(ProductController());
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -59,10 +63,14 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: TSizes.spaceBtwSections,),
+                  SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
                 ],
               ),
             ),
+
+
 
             /// Body
             Padding(
@@ -76,14 +84,30 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   /// Heading
-                  TSectionHeading(title: 'Popular Products', onPressed: () => Get.to(() => const AllProducts()),  ),
+                  TSectionHeading(
+                    title: 'Popular Products',
+                    onPressed: () => Get.to(() => const AllProducts()),
+                  ),
                   const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
 
                   /// -- Popular Products
-                  TGridLayout(itemCount: 2, itemBuilder: (_ , index ) => const TProductCardVertical(),),
+                  Obx(() {
+                    if(controller.isLoading.value) return const TVerticalProductShimmer();
+
+                    if(controller.featuredProducts.isEmpty){
+                      return Center(child: Text('No Data Found!', style: Theme.of(context).textTheme.bodyMedium,));
+                    }
+
+                    return TGridLayout(
+                      itemCount: controller.featuredProducts.length,
+                      itemBuilder: (_, index) => TProductCardVertical(product: controller.featuredProducts[index]),
+                    );
+                  }),
+
                 ],
+
               ),
             )
           ],
@@ -94,3 +118,26 @@ class HomeScreen extends StatelessWidget {
 }
 
 
+//       appBar: AppBar(
+//         title: Text('Upload Dummy Data'),
+//       ),
+//       body: Center(
+//         child: ElevatedButton(
+//           onPressed: () async {
+//             try {
+//               await controller.uploadDummyData(TDummyData.products);
+//               ScaffoldMessenger.of(context).showSnackBar(
+//                 SnackBar(content: Text('Data uploaded successfully!')),
+//               );
+//             } catch (e) {
+//               ScaffoldMessenger.of(context).showSnackBar(
+//                 SnackBar(content: Text('Failed to upload data: $e')),
+//               );
+//             }
+//           },
+//           child: Text('Upload Data'),
+//         ),
+//       ),
+//     );
+//   }
+// }

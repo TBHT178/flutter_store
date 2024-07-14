@@ -8,6 +8,7 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../navigation_menu.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../../models/product_model.dart';
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
@@ -26,7 +27,7 @@ class FavouriteScreen extends StatelessWidget {
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical())
+              TGridLayout(itemCount: 4, itemBuilder: (_, index) =>  TProductCardVertical(product: ProductModel.empty()))
             ],
           ),
         ),
